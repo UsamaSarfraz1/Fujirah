@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ScanQRActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/titleLayout"
+        android:gravity="center_vertical"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageButton
+            android:id="@+id/imgbtn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="#fff"
+            android:contentDescription="@string/image"
+            android:scaleType="fitXY"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:padding="10dp"
+            android:text="@string/scan_qr"
+            android:textColor="#fff"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/barcode_scanner"
+        android:name="info.androidhive.barcode.BarcodeReader"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/titleLayout"
+        android:layout_marginTop="-24dp"
+        app:auto_focus="true"
+        app:use_flash="false"
+        app:layout_constraintTop_toBottomOf="@id/titleLayout"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <info.androidhive.barcode.ScannerOverlay
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#44000000"
+        app:line_color="#7323DC"
+        app:line_speed="6"
+        app:line_width="4"
+        app:square_height="200"
+        app:square_width="200" />
+</androidx.constraintlayout.widget.ConstraintLayout>

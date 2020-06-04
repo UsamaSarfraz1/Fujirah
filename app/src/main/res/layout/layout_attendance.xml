@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/employee_id"
+            android:id="@+id/EmployeeId"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/txt_emp_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewEnd"
+            app:layout_constraintTop_toTopOf="@id/EmployeeId"
+            app:layout_constraintStart_toEndOf="@id/EmployeeId"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Employee Name"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:id="@+id/EmployeeName"
+            app:layout_constraintTop_toBottomOf="@id/txt_emp_id"
+            app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/txt_emp_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewEnd"
+            app:layout_constraintTop_toTopOf="@id/EmployeeName"
+            app:layout_constraintStart_toEndOf="@id/EmployeeName"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Employee Designation"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:id="@+id/EmployeeDesignation"
+            app:layout_constraintTop_toBottomOf="@id/txt_emp_name"
+            app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/txt_emp_designation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewEnd"
+            app:layout_constraintTop_toTopOf="@id/EmployeeDesignation"
+            app:layout_constraintStart_toEndOf="@id/EmployeeDesignation"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/attendance_status"
+            android:id="@+id/AttendanceStatus"
+            android:layout_marginTop="@dimen/_2sdp"
+            app:layout_constraintTop_toBottomOf="@id/txt_emp_designation"
+            app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewEnd"
+            android:id="@+id/txt_att_sts"
+            app:layout_constraintTop_toTopOf="@id/AttendanceStatus"
+            app:layout_constraintStart_toEndOf="@id/AttendanceStatus"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="@string/in_time"
+            android:id="@+id/InTime"
+            app:layout_constraintTop_toBottomOf="@id/txt_att_sts"
+            app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewEnd"
+            android:id="@+id/txt_in_time"
+            app:layout_constraintTop_toTopOf="@id/InTime"
+            app:layout_constraintStart_toEndOf="@id/InTime"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="@string/out_time"
+            android:id="@+id/OutTime"
+            app:layout_constraintTop_toBottomOf="@id/txt_in_time"
+            app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewEnd"
+            android:id="@+id/txt_out_time"
+            app:layout_constraintTop_toTopOf="@id/OutTime"
+            app:layout_constraintStart_toEndOf="@id/OutTime"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="@string/description"
+            android:id="@+id/Description"
+            app:layout_constraintTop_toBottomOf="@id/txt_out_time"
+            app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewEnd"
+            android:id="@+id/txt_desc"
+            app:layout_constraintTop_toTopOf="@id/Description"
+            app:layout_constraintStart_toEndOf="@id/Description"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="@string/attendance_date"
+            android:id="@+id/AttendanceDate"
+            app:layout_constraintTop_toBottomOf="@id/txt_desc"
+            app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewEnd"
+            android:id="@+id/txt_att_date"
+            app:layout_constraintTop_toTopOf="@id/AttendanceDate"
+            app:layout_constraintStart_toEndOf="@id/AttendanceDate"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>
