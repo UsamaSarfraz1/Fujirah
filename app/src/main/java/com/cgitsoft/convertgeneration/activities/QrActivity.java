@@ -42,6 +42,8 @@ public class QrActivity extends BaseScannerActivity implements
         ZXingScannerView.ResultHandler, FormatSelectorDialogFragment.FormatSelectorDialogListener,
         CameraSelectorDialogFragment.CameraSelectorDialogListener {
 
+
+    private static final String FLASH_SERIES = "FLASH_SERIES";
     private final static String TAG = QrActivity.class.getSimpleName();
     private static final String FLASH_STATE = "FLASH_STATE";
     private static final String AUTO_FOCUS_STATE = "AUTO_FOCUS_STATE";
@@ -56,6 +58,7 @@ public class QrActivity extends BaseScannerActivity implements
     private int mCameraId = -1;
     private String lat,lng;
     Ringtone r;
+
 
     @Override
     protected void onCreate(Bundle state) {
