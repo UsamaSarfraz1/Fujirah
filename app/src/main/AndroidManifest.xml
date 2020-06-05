@@ -24,12 +24,13 @@
         <activity android:name="com.Fujairah.convertgeneration.activities.QrActivity"
             android:theme="@style/AppTheme1"></activity>
         <activity android:name="com.Fujairah.convertgeneration.activities.ResetPasswordActivity" />
-        <activity android:name="com.Fujairah.convertgeneration.activities.ProfileActivity" />
+        <activity android:name="com.Fujairah.convertgeneration.activities.ProfileActivity" android:windowSoftInputMode="adjustPan"/>
         <activity android:name="com.Fujairah.convertgeneration.activities.ScanQRActivity" />
         <activity android:name="com.Fujairah.convertgeneration.activities.AttendanceDetailActivity" />
         <activity
             android:name="com.Fujairah.convertgeneration.Dashboard"
             android:label="@string/title_activity_dashboard"
+            android:windowSoftInputMode="adjustPan"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.Fujairah.convertgeneration.activities.LoginActivity"

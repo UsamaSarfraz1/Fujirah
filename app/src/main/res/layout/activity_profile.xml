@@ -196,14 +196,23 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-    <Button
-        android:id="@+id/updateBtn"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="50dp"
-        android:background="@drawable/shape_btn_primary"
-        android:text="Update"
-        android:enabled="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="50dp" />
+        android:layout_height="match_parent"
+
+        >
+        <Button
+            android:id="@+id/updateBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:background="@drawable/shape_btn_primary"
+            android:text="Update"
+            android:enabled="false"
+            android:layout_alignParentBottom="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="50dp" />
+    </RelativeLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
