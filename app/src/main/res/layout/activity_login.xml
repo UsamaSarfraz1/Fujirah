@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/splash"
+    android:background="@color/colorWhite"
     android:layout_height="match_parent"
     android:id="@+id/parent"
     android:fitsSystemWindows="true"
@@ -25,39 +25,20 @@
 
                 <ImageView
                     android:id="@+id/Logo"
-                    android:layout_width="@dimen/_90sdp"
-                    android:layout_height="@dimen/_90sdp"
+                    android:layout_width="@dimen/_130sdp"
+                    android:layout_height="@dimen/_130sdp"
                     android:layout_marginStart="100dp"
                     android:layout_marginEnd="100dp"
                     android:contentDescription="@string/image"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/logo"
+                    android:src="@drawable/fujairah"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/CGIT"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/cgit"
-                    android:textColor="#FFFFFF"
-                    android:textSize="@dimen/_16ssp"
-                    app:layout_constraintEnd_toEndOf="@id/Logo"
-                    app:layout_constraintStart_toStartOf="@id/Logo"
-                    app:layout_constraintTop_toBottomOf="@id/Logo" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/it"
-                    android:textColor="#FFFFFF"
-                    android:textSize="@dimen/_16ssp"
-                    app:layout_constraintEnd_toEndOf="@id/Logo"
-                    app:layout_constraintStart_toStartOf="@id/Logo"
-                    app:layout_constraintTop_toBottomOf="@id/CGIT" />
+
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -68,6 +49,7 @@
                 android:layout_marginStart="@dimen/_25sdp"
                 android:layout_marginEnd="@dimen/_25sdp"
                 app:cardCornerRadius="@dimen/_20sdp"
+
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -76,6 +58,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="#CCB5011A"
                     android:padding="@dimen/_10sdp">
 
                     <com.wang.avi.AVLoadingIndicatorView
@@ -84,7 +67,7 @@
                         android:layout_height="wrap_content"
                         android:visibility="visible"
                         android:elevation="@dimen/_10sdp"
-                        app:indicatorColor="@color/colorAccent"
+                        app:indicatorColor="@color/colorWhite"
                         app:indicatorName="BallScaleRippleMultipleIndicator"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -96,7 +79,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/login"
-                        android:textColor="@color/colorAccent"
+                        android:textColor="@color/colorWhite"
                         android:textSize="25sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
@@ -106,7 +89,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/login_detail"
-                        android:textColor="#000"
+                        android:textColor="@color/colorWhite"
                         android:textSize="14sp"
                         app:layout_constraintStart_toStartOf="@id/title"
                         app:layout_constraintTop_toBottomOf="@id/title" />
@@ -129,6 +112,7 @@
                         android:layout_marginEnd="20dp"
                         app:boxStrokeColor="@color/colorAccent"
                         android:hint="@string/email"
+                        android:textColorHint="@color/colorWhite"
                         app:boxCornerRadiusBottomEnd="80dp"
                         app:boxCornerRadiusBottomStart="80dp"
                         app:boxCornerRadiusTopEnd="80dp"
@@ -138,6 +122,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:inputType="textEmailAddress"
+                            android:backgroundTint="@color/colorWhite"
+                            android:textColor="@color/colorWhite"
                             android:id="@+id/txt_email"/>
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -145,21 +131,26 @@
                         android:id="@+id/Password"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        style="@style/FilledBoxEndIconTint"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="15dp"
                         android:layout_marginEnd="20dp"
                         app:boxStrokeColor="@color/colorAccent"
                         android:hint="@string/password"
+                        android:textColorHint="@color/colorWhite"
                         app:boxCornerRadiusBottomEnd="80dp"
                         app:boxCornerRadiusBottomStart="80dp"
                         app:boxCornerRadiusTopEnd="80dp"
                         app:boxCornerRadiusTopStart="80dp"
-                        app:passwordToggleEnabled="true"
+                        app:endIconMode="password_toggle"
                         app:layout_constraintTop_toBottomOf="@id/Email">
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:inputType="textPassword"
+                            android:backgroundTint="@color/colorWhite"
+                            android:textColor="@color/colorWhite"
+                            android:textColorHint="@color/colorWhite"
                             android:id="@+id/txt_password"/>
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -193,7 +184,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="25dp"
                         android:text="@string/login"
-                        android:textColor="@color/colorAccent"
+                        android:textColor="@color/colorWhite"
                         android:textSize="18sp"
                         app:layout_constraintEnd_toEndOf="@id/Password"
                         app:layout_constraintTop_toBottomOf="@id/errorMessage" />
